@@ -1,0 +1,113 @@
+  
+/*******************************
+  Hero background
+********************************/
+.hero {
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    height: 80vh;
+    min-height: 35rem;
+    background-color:#fafafa;
+  
+    overflow: hidden;
+  }
+  
+  /*******************************
+    Central icon and text
+  ********************************/
+  .icon-holder {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .icon-holder__icon {
+    position: absolute;
+    top: 7rem;
+    width: 12rem;
+  }
+  
+  .icon-holder__icon img {
+    max-width: 100%;
+  }
+  
+  .icon-holder__text {
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 11rem;
+    text-align: center;
+    white-space: pre;
+  }
+  
+  /*******************************
+    Food images
+  ********************************/
+  .food-image {
+    position: absolute;
+  }
+  
+  .food-image img {
+    max-width: 100%;
+  }
+  
+  .food-image_one {
+    left: -20rem;
+    width: 80vw;
+    max-width: 900px;
+    top: -18rem;
+  }
+   
+  .food-image_two {
+    bottom: -11rem;
+    right: -11rem;
+    width: 80vw;
+    max-width: 650px;
+  }
+  
+  /*******************************
+    Responsive changes
+  ********************************/
+  @media screen and (max-width: 876px) {
+    .hero {
+      height: 70vh;
+    }
+  
+    /*******************************
+      Icon and text cover
+    ********************************/
+  
+    .icon-holder__icon {
+      top: auto;
+      bottom: 7rem;
+      max-width: 10rem;
+    }
+    
+    .icon-holder__text {
+      font-size: 3rem;
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      bottom: -1rem;
+      text-align: center;
+     }
+  
+    /*******************************
+      Reposition images
+    ********************************/
+    .food-image_one {
+      top: -5rem;
+      width: 80vw;
+    }
+  
+    .food-image_two {
+      top: 18rem;
+      bottom: auto;
+      right: -5rem;
+      width: 50vw;
+    }
+  
+  }

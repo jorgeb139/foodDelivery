@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
+import Register from "./pages/Register";
+import PCMenu from "./components/principalMenu/PCMenu"
+import "./App.css";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Snackbar from "./components/Snackbar";
+import MobileMenu from "./components/principalMenu/MobileMenu";
+import Menu from "./components/principalMenu/Menu"
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <PCMenu/> */}
+      {/* <MobileMenu/> */}
+      <Menu/>
+      <Snackbar />
+      <Switch>
+        <Route exact from="/" render={props => <Home {...props} />} />
+        <Route exact path="/login" render={props => <Login {...props} />} />
+        <Route exact path="/register" render={props => <Register {...props} />} />
+      </Switch>
+    </>
   );
 }
 
-export default App;
