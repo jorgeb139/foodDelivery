@@ -18,7 +18,7 @@ export const notAuthMenu = [
       pageURL: "/register",
     },
     {
-      menuTitle: "Inicia sesión",
+      menuTitle: "Iniciar sesión",
       listIcon: <AssignmentTurnedInIcon />,
       pageURL: "/login",
     },

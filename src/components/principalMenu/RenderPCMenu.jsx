@@ -26,7 +26,6 @@ const RenderPCMenu = (props) => {
             key={`${menuTitle}-${listIcon}`}
             onClick={() => handleMenuClick(pageURL)}
           >
-            <ListItemIcon>{listIcon}</ListItemIcon> 
             {menuTitle}
           </Button>
         );
