@@ -1,11 +1,9 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography , IconButton } from '@material-ui/core';
+import { CardActionArea, Card, CardHeader, CardMedia, CardContent, CardActions, Typography , IconButton } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import ShareIcon from '@material-ui/icons/Share';
-import axios from "axios";
-import dishes from "../../assets/dummyData/dishes.json";
 import { Grid } from "@material-ui/core";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +28,40 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const RecipeReviewCard = () => {
+const baseURL = "dishes.json";
+
+const RenderCard = () => {
   const classes = useStyles();
- 
+
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const dishes = await axios.get(baseURL);
+      setDishes(dishes.data);
+    })();
+  }, []);
+  
+  const [cartItems, setCartItems] = useState ([]);
+
+  const addToCart = (dishes) => {
+    const cartItems = cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.foreach ((item) => {
+      if (item.id === dishes.id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if(!alreadyInCart) {
+      cartItems.push({...dishes, count: 1});
+    }
+  }; 
+
+  const prueba = () => {
+    console.log("click")
+  };
+
   return (
     <Grid
       container
@@ -42,31 +71,31 @@ const RecipeReviewCard = () => {
     >
       {
         dishes.map((dishes) => (
-          <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.root}>
+          <Grid item xs={12} sm={6} md={4} key={ dishes.id }>
+          <Card className={classes.root} >
+            <CardActionArea href="#" color="inherit">
             <CardHeader
-              title={ dishes.name }
+              title={ dishes.name } 
             />
-            <CardMedia
-              className={classes.media}
-              image={ dishes.picture }
-              title={ dishes.name }
-            />
+              <CardMedia
+                className={classes.media}
+                image={ dishes.picture }
+                title={ dishes.name }
+                alt={ dishes.name }
+              />
+            </CardActionArea>
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p" align = "justify">
                 `{ dishes.description }`
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="Compartir">
-                <ShareIcon />
-              </IconButton>
-              <IconButton aria-label="Añadir al carrito">
-                <AddShoppingCartIcon />
-              </IconButton>
               <Typography className={classes.price} color="textSecondary" >
                 PRECIO: { dishes.price }
               </Typography>
+              <IconButton aria-label="Añadir al carrito" onClick={()=>prueba()}>
+                <AddShoppingCartIcon />
+              </IconButton>
             </CardActions>
           </Card>
           </Grid>
@@ -76,4 +105,4 @@ const RecipeReviewCard = () => {
   );
 }
 
-export default RecipeReviewCard;
+export default RenderCard;
