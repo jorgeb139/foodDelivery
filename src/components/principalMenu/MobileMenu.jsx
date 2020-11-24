@@ -7,6 +7,9 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { withRouter } from "react-router-dom";
 
+import "./Menu.css";
+import "fontsource-lobster" 
+import basics from "../../assets/dummyData/basics.json";
 import RenderMobileMenu from "./RenderMobileMenu";
 
 const drawerWidth = 220;
@@ -29,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen
     }),
     marginRight: drawerWidth
-  },
-  title: {
-    flexGrow: 1
   },
   menuButton: {
     marginRight: 36
@@ -92,17 +92,18 @@ const MobileMenu = props => {
       <CssBaseline />
       <AppBar
         position="fixed"
+        style={{ background: 'white' }}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open
         })}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap className={classes.title}>
-            Mini variant drawer
+          <Typography variant="h5" noWrap className= "title">
+            {basics.title}
           </Typography>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            color="default"
+            aria-label="abrir menú"
             edge="end"
             onClick={handleDrawerOpen}
             className={clsx(open && classes.hide)}

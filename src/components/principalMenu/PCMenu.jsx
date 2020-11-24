@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
 import { withRouter } from "react-router-dom";
+import "./Menu.css";
 
-
+import basics from "../../assets/dummyData/basics.json";
 import RenderPCMenu from "./RenderPCMenu";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,23 +13,21 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-    color: "#000"
-  },
+  offset: theme.mixins.toolbar,
 }));
 
 const PCMenu = props => {
   const { history } = props;
   const classes = useStyles();
-  const [auth, setAuth] = useState(false);
+  const auth = false;
 
-  return (
+    return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: 'transparent' }}>
+      <div className={classes.offset}></div>
+      <AppBar position="fixed" style={{ background: 'white' }}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Pide tu comida
+          <Typography variant="h4" className="title">
+            {basics.title}
           </Typography>
             <div>
               <RenderPCMenu auth = {auth} history = {history} ></RenderPCMenu>             

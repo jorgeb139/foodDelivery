@@ -73,7 +73,7 @@ const Login = () => {
 
   const onSubmit = async () => {
     try {
-      const res = await axios.post(baseURL, personal);
+      const response = await axios.post(baseURL, personal);
       dispatch(setSnackbar(true,"success","¡Inicio de sesión exitoso!"));
       dispatch(verifyLogin(true));
     } catch (error) {

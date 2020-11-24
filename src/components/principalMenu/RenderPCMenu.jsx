@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ListItemIcon } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 import { notAuthMenu, authMenu } from "../../const/itemsMenu"
 
@@ -21,14 +21,26 @@ const RenderPCMenu = (props) => {
     <div>
       {items.map((menuItem) => {
         const { menuTitle, listIcon, pageURL } = menuItem;
-        return (
-          <Button
-            key={`${menuTitle}-${listIcon}`}
-            onClick={() => handleMenuClick(pageURL)}
-          >
-            {menuTitle}
-          </Button>
-        );
+        if (menuTitle === "Carrito") {
+          return (
+            <Button
+              key={`${menuTitle}-${listIcon}`}
+              onClick={() => handleMenuClick(pageURL)}
+            >
+              {listIcon}
+            </Button>
+          );
+        }
+        else{
+          return (
+            <Button
+              key={`${menuTitle}-${listIcon}`}
+              onClick={() => handleMenuClick(pageURL)}
+            >
+              {menuTitle}
+            </Button>
+          );
+        };
       })}
     </div>
   );
