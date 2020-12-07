@@ -1,10 +1,10 @@
 import React from "react";
 import AssignmentIcon from "@material-ui/icons/Assignment";
-import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 import HistoryIcon from "@material-ui/icons/History";
 import HomeIcon from "@material-ui/icons/Home";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 export const notAuthMenu = [
     {
@@ -12,15 +12,20 @@ export const notAuthMenu = [
       listIcon: <HomeIcon />,
       pageURL: "/",
     },
+    // {
+    //   menuTitle: "Mi cuenta",
+    //   listIcon: <AssignmentIcon />,
+    //   pageURL: "/my-account",
+    // },
     {
-      menuTitle: "Registro",
+      menuTitle: "Login",
       listIcon: <AssignmentIcon />,
-      pageURL: "/register",
+      pageURL: "/login",
     },
     {
-      menuTitle: "Iniciar sesión",
-      listIcon: <AssignmentTurnedInIcon />,
-      pageURL: "/login",
+      menuTitle: "Carrito",
+      listIcon: <ShoppingCartIcon />,
+      pageURL: "/",
     },
   ];
   
@@ -43,6 +48,11 @@ export const authMenu = [
     {
       menuTitle: "Cerrar sesión",
       listIcon: <ExitToAppIcon />,
+      pageURL: "/",
+    },
+    {
+      menuTitle: "Carrito",
+      listIcon: <ShoppingCartIcon />,
       pageURL: "/",
     },
   ];

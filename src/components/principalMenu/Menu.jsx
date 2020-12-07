@@ -8,9 +8,11 @@ import PCMenu from './PCMenu'
 const Menu = () => {
     return (
         <div>
-            <PCMenu></PCMenu>
+            <Hidden smDown>
+                <PCMenu/>
+            </Hidden>
             <Hidden mdUp>
-                <MobileMenu></MobileMenu>            
+                <MobileMenu/>            
             </Hidden>
         </div>
     )

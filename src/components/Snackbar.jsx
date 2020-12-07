@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
-import { setSnackbar } from "../redux/ducks/snackbar";
 import { Slide } from "@material-ui/core";
+
+import { setSnackbar } from "../redux/ducks/snackbar";
 
 const useStyles = makeStyles(theme => ({
   root: {

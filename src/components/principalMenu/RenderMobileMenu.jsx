@@ -1,7 +1,7 @@
 import React from "react";
 import { List, MenuItem, ListItemIcon } from "@material-ui/core";
 
-import { notAuthMenu, authMenu } from "../../const/itemsMenu"
+import { notAuthMenu, authMenu } from "../../assets/dummyData/itemsMenu"
 
 const RenderMobileMenu = (props) => {
   const { history } = props;
