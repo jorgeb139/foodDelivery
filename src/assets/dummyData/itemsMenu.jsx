@@ -12,15 +12,10 @@ export const notAuthMenu = [
       listIcon: <HomeIcon />,
       pageURL: "/",
     },
-    // {
-    //   menuTitle: "Mi cuenta",
-    //   listIcon: <AssignmentIcon />,
-    //   pageURL: "/my-account",
-    // },
     {
-      menuTitle: "Login",
+      menuTitle: "Sesión",
       listIcon: <AssignmentIcon />,
-      pageURL: "/login",
+      pageURL: "/session",
     },
     {
       menuTitle: "Carrito",

@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import amber from '@material-ui/core/colors/amber';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { notAuthMenu, authMenu } from "../../assets/dummyData/itemsMenu"
@@ -9,9 +8,6 @@ const useStyles = makeStyles((theme) => ({
   cartButton: {
     marginLeft: '0.7rem',
     margin: theme.spacing(1),
-    backgroundColor: amber[200],
-    '&:hover': {
-      backgroundColor: amber[500],}
   },
 }));
 
@@ -37,6 +33,7 @@ const RenderPCMenu = (props) => {
         if (menuTitle === "Carrito") {
           return (
             <Button
+              color="secondary"
               className={classes.cartButton}
               variant="contained"
               key={`${menuTitle}-${listIcon}`}

@@ -11,7 +11,6 @@ import {
   TextField,
   Modal
   } from '@material-ui/core';
-import amber from '@material-ui/core/colors/amber';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Grid } from "@material-ui/core";
 import axios from "axios";
@@ -38,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
   cartButton: {
     marginLeft: 'auto',
     margin: theme.spacing(1),
-    backgroundColor: amber[200],
-    '&:hover': {
-      backgroundColor: amber[500],}
   },
   gridContainer: {
     paddingLeft: "40px",
@@ -79,18 +75,6 @@ const cardsVariants = {
     },
   },
 };
-
-// const modalVariants = {
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible:{
-//     opacity: 1,
-//     transition:{ 
-//       duration: 0.5, 
-//     },
-//   },
-// };
 
   const body=(
       <div className="modal">
@@ -149,7 +133,6 @@ const RenderCard = () => {
   const prueba = () => {
   //   ModalDishes(true, "Titulo", "Descripción", "Precio");
   //   setToogled = (prevValue => !prevValue)
-  console.log("Chao")
   return (
     <ModalDishes isToggled={isToggled} setToggled = {setToggled}>
           {body}
@@ -202,6 +185,7 @@ const RenderCard = () => {
                   endIcon={<AddShoppingCartIcon />}
                   aria-label="Añadir al carrito"
                   className={classes.cartButton}
+                  color="secondary"
                 >
                   Añadir
                 </Button>

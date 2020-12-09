@@ -54,7 +54,6 @@ const ModalDishes = ( { isToggled, setToggled, children } ) => {
 
     return (
         <AnimatePresence>
-            {console.log("HOla")}
             {isToggled && (
                 <motion.div
                     initial ={{ opacity: 0 }}
