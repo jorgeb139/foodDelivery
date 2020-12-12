@@ -5,7 +5,7 @@ import { IconButton, Divider, Typography, CssBaseline, Drawer, AppBar, Toolbar }
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import "./Menu.css";
 import basics from "../../assets/dummyData/basics.json";
@@ -99,7 +99,9 @@ const MobileMenu = props => {
       >
         <Toolbar>
           <Typography variant="h5" noWrap className= "title">
-            {basics.title}
+            <Link to="/" style={{ textDecoration: 'none', color: 'unset' }}>
+              {basics.title}
+            </Link>
           </Typography>
           <IconButton
             color="default"
