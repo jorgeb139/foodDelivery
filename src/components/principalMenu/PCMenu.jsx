@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./Menu.css";
 
 import basics from "../../assets/dummyData/basics.json";
@@ -27,7 +27,9 @@ const PCMenu = props => {
       <AppBar position="fixed" style={{ background: 'white' }}>
         <Toolbar>
           <Typography variant="h4" className="title">
-            {basics.title}
+            <Link to="/" style={{ textDecoration: 'none', color: 'unset' }}>
+              {basics.title}
+            </Link>
           </Typography>
             <div>
               <RenderPCMenu auth = {auth} history = {history} ></RenderPCMenu>             
