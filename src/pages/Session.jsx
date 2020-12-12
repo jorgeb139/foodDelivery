@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import Login from '../components/session/Login';
 import Register from '../components/session/Register';
 import backgroundImage from "../assets/images/backgrounds/sessions-background.jpg";
+import { PagesTransition } from '../assets/dummyData/PagesTransition';
 
 const useStyles = makeStyles((theme) => ({
   background:{
@@ -51,26 +52,6 @@ function TabPanel(props) {
 
 const Session = () => {
 
-  const myAccountContainerVariant = {
-    hidden: {
-      opacity: 0,
-    },
-    visible:{
-      opacity: 1,
-      transition:{ 
-        delay: 0.5, 
-        duration: 1, 
-        type: "spring", 
-        stiffness: 50 
-      },
-    },
-    exit:{
-      opacity:0,
-      x: "10vw",
-      transition:{ ease: "easeInOut" },
-    },
-  };
-
   const [value, setValue] = useState(0);
   const classes = useStyles();
 
@@ -80,7 +61,7 @@ const Session = () => {
 
   return (
     <motion.div
-      variants = {myAccountContainerVariant}
+      variants = {PagesTransition}
       initial= "hidden"
       animate= "visible"
       exit="exit"
