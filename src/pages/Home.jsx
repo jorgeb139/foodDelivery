@@ -25,7 +25,6 @@ const useStyles = makeStyles (()=>({
     paddingRight: "60px",
   },
   tittle:{
-    //fontStyle:"italic",
     fontFamily:"Lobster",
   }
 }))
