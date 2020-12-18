@@ -1,6 +1,10 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
+<<<<<<< HEAD
 import { withRouter, Link } from "react-router-dom";
+=======
+import { Link, withRouter } from "react-router-dom";
+>>>>>>> 04-Modal
 import "./Menu.css";
 
 import basics from "../../assets/dummyData/basics.json";

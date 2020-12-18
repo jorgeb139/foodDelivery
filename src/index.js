@@ -11,7 +11,7 @@ import theme from "./services/theme"
 
 const rootElement = document.getElementById("root");
 ReactDOM.render( 
-  <React.StrictMode>
+  //<React.StrictMode>
     <ThemeProvider theme ={theme}>
       <Provider store={store}>
         <Router>
@@ -19,7 +19,7 @@ ReactDOM.render(
           <App />
         </Router>
       </Provider>
-    </ThemeProvider>
-  </React.StrictMode>,
+    </ThemeProvider>,
+  //</React.StrictMode>,
   rootElement
 );
