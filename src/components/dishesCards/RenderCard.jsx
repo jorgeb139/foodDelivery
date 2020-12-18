@@ -2,20 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { 
   CardActionArea, 
-  Card, CardHeader, 
+  Card, 
+  CardHeader, 
   CardMedia, 
   CardContent, 
   CardActions, 
   Typography, 
-  Button,
-  TextField,
-  Modal
+  Button
   } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Grid } from "@material-ui/core";
 import axios from "axios";
 import { motion } from "framer-motion";
 
+import basics from "../../assets/dummyData/basics.json";
 import ModalDishes from '../dishesCards/ModalDishes';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,24 +39,13 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   gridContainer: {
-    paddingLeft: "40px",
-    paddingRight: "40px",
-    marginTop: "20px"
+    paddingLeft: "5vw",
+    paddingRight: "5vw",
+    marginTop: "20px",
   },
-  modal:{
-    position: "absolute",
-    width: 400,
-    backgroundColor: "white",
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2,4,3,4),
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+  textfield:{
+      width: "100%",
   },
-    textfield:{
-        width: "100%",
-    },
 }));
 
 const cardsVariants = {
@@ -76,33 +65,15 @@ const cardsVariants = {
   },
 };
 
-  const body=(
-      <div className="modal">
-          <div aling="center">
-              <h2>
-                  MI MODAL
-              </h2>
-          </div>
-          <TextField label= "{modalTittle}" className="text" />
-          <br/>
-          <TextField label= "{modalDescription}" className="text" />
-          <br/>
-          <TextField label= "{modalPrice}" className="text" />
-          <br/>
-          <div align = "right" >
-              <Button color="primary">Enviar</Button>
-              <Button>Cancelar</Button>
-          </div>
-      </div>
-  );
-
 const baseURL = "dishes.json";
 
 const RenderCard = () => {
   const classes = useStyles();
 
+  const [openModalDishes, setOpenModalDishes] = useState(false);
   const [dishes, setDishes] = useState([]);
-  let [isToggled, setToggled] = useState(false)
+  const [dataDishes, setDataDishes] = useState ([]);
+
 
   useEffect(() => {
     (async () => {
@@ -110,11 +81,7 @@ const RenderCard = () => {
       setDishes(dishes.data);
     })();
   }, []);
-
-  useEffect(() => {
-    prueba();
-  }, [isToggled])
-  
+ 
   const addToCart = (dishes) => {
 
     const cartItems = cartItems.slice();
@@ -130,14 +97,9 @@ const RenderCard = () => {
     }
   }; 
 
-  const prueba = () => {
-  //   ModalDishes(true, "Titulo", "Descripción", "Precio");
-  //   setToogled = (prevValue => !prevValue)
-  return (
-    <ModalDishes isToggled={isToggled} setToggled = {setToggled}>
-          {body}
-    </ModalDishes>
-  )
+  const prueba = dish => {
+    setDataDishes(dish);
+    setOpenModalDishes(true);
   };
 
   return (
@@ -146,10 +108,12 @@ const RenderCard = () => {
       spacing={4}
       className={classes.gridContainer}
       justify="center"
+      alignContent= "stretch"
+      alignItems= "stretch"
     >
       {
-        dishes.map((dishes) => (
-          <Grid item xs={12} sm={6} md={4} key={ dishes.id }>
+        dishes.map((dish) => (
+          <Grid item xs={12} sm={6} md={4} key={ dish.id }>
           <motion.div
             variants={cardsVariants} 
             initial="hidden"
@@ -158,27 +122,26 @@ const RenderCard = () => {
             <Card className={classes.root} >
               <CardActionArea 
                 color="inherit" 
-                //onClick={()=>prueba()}
-                onClick={()=> setToggled = (true)}
+                onClick={()=>prueba(dish)}
               >
               <CardHeader
-                title={ dishes.name } 
+                title={ dish.name } 
               />
                 <CardMedia
                   className={classes.media}
-                  image={ dishes.picture }
-                  title={ dishes.name }
-                  alt={ dishes.name }
+                  image={ dish.picture }
+                  title={ dish.name }
+                  alt={ dish.name }
                 />
               </CardActionArea>
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p" align = "justify">
-                  `{ dishes.description }`
+                  { dish.description }
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
                 <Typography className={classes.price} color="textSecondary" >
-                  PRECIO: { dishes.price } ARS 
+                  PRECIO: { dish.price } ARS 
                 </Typography>
                 <Button
                   variant="contained"
@@ -195,13 +158,12 @@ const RenderCard = () => {
           </Grid>
         ))
       }
-      <ModalDishes isToggled={isToggled} setToggled = {setToggled}>
-        {body}
-      </ModalDishes>
-        {/* <Modal isToggled={isToggled} setToogled = {setToogled}>
-          {body}
-        </Modal> */}
-
+      <ModalDishes
+        title = {basics.title}
+        dataDishes={dataDishes}
+        openModalDishes={openModalDishes}
+        setOpenModalDishes={setOpenModalDishes}
+      />
     </Grid>
   );
 }
