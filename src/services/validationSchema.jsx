@@ -12,10 +12,7 @@ const ValidationSchema = yup.object().shape({
       .max(15, 'Debe tener un máximo de 15 caracteres.')
       .required('Requerido.'),
       phone: yup.string()
-<<<<<<< HEAD
       .trim()
-=======
->>>>>>> 04-Modal
       .matches(/[0-9]/, 'Contraseña solo puede contener números.')
       .min(3, 'Debe tener un minimo de 3 números.')
       .max(15, 'Debe tener un máximo de 15 números.')
