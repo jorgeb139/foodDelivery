@@ -12,10 +12,6 @@ const useStyles = makeStyles(theme => ({
     container: {
         position: "absolute",
         flexGrow: 1,
-        //minHeight:"65%",
-        // [theme.breakpoints.down("xs")]: {
-        //     height:"65%"
-        // },
         '@media': {
             height: "65%",
         },
@@ -28,9 +24,9 @@ const useStyles = makeStyles(theme => ({
         paddingBottom:"5px",
     },
     title:{
-        fontSize: "2rem",
+        fontSize: "2em",
         [theme.breakpoints.down("xs")]: {
-          fontSize: "1.7rem"
+          fontSize: "1.8em"
         },
     },
     closeButton: {
@@ -65,6 +61,7 @@ const useStyles = makeStyles(theme => ({
         height: "100%",
         [theme.breakpoints.down("sm")]: {
             height: "30%",
+            paddingBottom:"20px"
         },
         left: "-100%",
         right: "-100%",
@@ -73,6 +70,13 @@ const useStyles = makeStyles(theme => ({
         margin: "auto",
         minHeight: "100%",
         position: "absolute"
+    },
+    price:{
+        paddingBottom:"15px",
+        fontSize:"1.1rem",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1rem",
+        },
     },
 }))
 
@@ -114,9 +118,9 @@ const ModalDishes = (props) => {
                     <Grid item xs={12} sm={5} className={classes.description}>
                         <Box className={classes.ppal}>
                             <div aling="center">
-                                <h2>
+                                <Typography variant="h5" paragraph align = "justify">
                                     { dish.name }
-                                </h2>
+                                </Typography>
                             </div>
                             <div>
                                 <div>
@@ -124,7 +128,7 @@ const ModalDishes = (props) => {
                                         { dish.description }
                                     </Typography>
                                     <Typography className={classes.price} color="textSecondary" >
-                                        PRECIO: {dish.price} ARS 
+                                        <strong>PRECIO: {dish.price} ARS</strong> 
                                     </Typography>
                                 </div>
                                 <div align = "right" className = {classes.button}>
