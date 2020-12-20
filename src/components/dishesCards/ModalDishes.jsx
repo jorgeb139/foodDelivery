@@ -12,8 +12,17 @@ const useStyles = makeStyles(theme => ({
     container: {
         position: "absolute",
         flexGrow: 1,
-        minHeight:"70%",
-        padding:"20px 40px 20px 30px"
+        //minHeight:"65%",
+        // [theme.breakpoints.down("xs")]: {
+        //     height:"65%"
+        // },
+        '@media': {
+            height: "65%",
+        },
+        '@media (min-height: 950px)': {
+            height: "500px",
+        },
+        padding:"20px 40px 20px 30px",
     },
     titleContainer:{
         paddingBottom:"5px",
@@ -37,15 +46,26 @@ const useStyles = makeStyles(theme => ({
         paddingBottom:"15px",
     },
     imgContainer: {
-        // width: "600px",
-        // height: "400px",
-        //width: "95%",
-        //height: "30vh",
+        width: "95%",
+        height: "190%",
+        [theme.breakpoints.down("sm")]: {
+            height: "140%",
+        },
+        [theme.breakpoints.only("xs")]: {
+            height: "180px",
+            width: "250px",
+        },
+        '@media (max-height: 750px)': {
+            height: "50vh",
+        },
         overflow: "hidden",
         position: "relative",
     },
     image: {
-        //height: "400px",
+        height: "100%",
+        [theme.breakpoints.down("sm")]: {
+            height: "30%",
+        },
         left: "-100%",
         right: "-100%",
         top: "-100%",
@@ -86,7 +106,7 @@ const ModalDishes = (props) => {
                         </div>
                         <Divider variant="fullWidth"/>
                     </Grid>
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={12} sm={7} align="center">
                         <Box className={classes.imgContainer}>
                             <img src={ dish.picture } className={classes.image} />
                         </Box>
