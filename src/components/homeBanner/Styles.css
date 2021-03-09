@@ -2,7 +2,7 @@
 /*******************************
   Hero background
 ********************************/
-.hero {
+/* .hero {
     position: relative;
   
     display: flex;
@@ -14,7 +14,7 @@
     background-color:#fafafa;
   
     overflow: hidden;
-  }
+  } */
   
   /*******************************
     Central icon and text
@@ -84,9 +84,9 @@
     Responsive changes
   ********************************/
   @media screen and (max-width: 876px) {
-    .hero {
+    /* .hero {
       height: 70vh;
-    }
+    } */
   
     /*******************************
       Icon and text cover

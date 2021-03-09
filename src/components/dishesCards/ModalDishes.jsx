@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { makeStyles } from "@material-ui/core/styles";
-import { motion, AnimatePresence} from "framer-motion";
+import { motion } from "framer-motion";
 import { red } from '@material-ui/core/colors';
 import CloseIcon from '@material-ui/icons/Close';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -24,9 +24,9 @@ const useStyles = makeStyles(theme => ({
         paddingBottom:"5px",
     },
     title:{
-        fontSize: "2em",
+        fontSize: "2rem",
         [theme.breakpoints.down("xs")]: {
-          fontSize: "1.8em"
+          fontSize: "1.8rem"
         },
     },
     closeButton: {
@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
             fontSize: "1rem",
         },
     },
-}))
+}));
 
 const ModalDishes = (props) => {
     const classes = useStyles();

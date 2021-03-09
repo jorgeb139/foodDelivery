@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { Grid } from "@material-ui/core";
+import axios from "axios";
+import { motion } from "framer-motion";
 import { 
   CardActionArea, 
   Card, 
@@ -9,14 +13,12 @@ import {
   CardActions, 
   Typography, 
   Button
-  } from '@material-ui/core';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import { Grid } from "@material-ui/core";
-import axios from "axios";
-import { motion } from "framer-motion";
+} from '@material-ui/core';
 
 import basics from "../../assets/dummyData/basics.json";
 import ModalDishes from '../dishesCards/ModalDishes';
+
+const baseURL = "dishes.json";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,8 +66,6 @@ const cardsVariants = {
     },
   },
 };
-
-const baseURL = "dishes.json";
 
 const RenderCard = () => {
   const classes = useStyles();
