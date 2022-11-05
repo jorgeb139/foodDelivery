@@ -1,0 +1,178 @@
+{
+  "results": [
+    {
+      "userId": 1,
+      "pronostics": [
+        {
+          "groupId": 1,
+          "matches": [
+            {
+              "matchId": 1,
+              "homeGoals": 3,
+              "awayGoals": 1,
+              "points": 6
+            },
+            {
+              "matchId": 2,
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "points": 0
+            },
+            {
+              "matchId": 3,
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 4,
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 5,
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 6,
+              "homeGoals": 4,
+              "awayGoals": 0,
+              "points": 0
+            }
+          ]
+        },
+        {
+          "groupId": 2,
+          "matches": [
+            {
+              "matchId": 1,
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "points": 0
+            },
+            {
+              "matchId": 2,
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "points": 0
+            },
+            {
+              "matchId": 3,
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 4,
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 5,
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 6,
+              "homeGoals": 4,
+              "awayGoals": 0,
+              "points": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "pronostics": [
+        {
+          "groupId": 1,
+          "matches": [
+            {
+              "matchId": 1,
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "points": 0
+            },
+            {
+              "matchId": 2,
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "points": 0
+            },
+            {
+              "matchId": 3,
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 4,
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 5,
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 6,
+              "homeGoals": 4,
+              "awayGoals": 0,
+              "points": 0
+            }
+          ]
+        },
+        {
+          "groupId": 2,
+          "matches": [
+            {
+              "matchId": 1,
+              "homeGoals": 2,
+              "awayGoals": 3,
+              "points": 0
+            },
+            {
+              "matchId": 2,
+              "homeGoals": 1,
+              "awayGoals": 4,
+              "points": 0
+            },
+            {
+              "matchId": 3,
+              "homeGoals": 5,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 4,
+              "homeGoals": 1,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 5,
+              "homeGoals": 2,
+              "awayGoals": 1,
+              "points": 0
+            },
+            {
+              "matchId": 6,
+              "homeGoals": 4,
+              "awayGoals": 0,
+              "points": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+}
