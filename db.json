@@ -5,6 +5,7 @@
       "pronostics": [
         {
           "groupId": 1,
+          "group": "A",
           "matches": [
             {
               "matchId": 1,
@@ -46,6 +47,7 @@
         },
         {
           "groupId": 2,
+          "group": "B",
           "matches": [
             {
               "matchId": 1,
@@ -92,6 +94,7 @@
       "pronostics": [
         {
           "groupId": 1,
+          "group": "A",
           "matches": [
             {
               "matchId": 1,
@@ -133,6 +136,7 @@
         },
         {
           "groupId": 2,
+          "group": "B",
           "matches": [
             {
               "matchId": 1,
