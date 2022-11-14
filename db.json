@@ -4,86 +4,242 @@
       "userId": 1,
       "pronostics": [
         {
-          "groupId": 1,
+          "id": 1,
           "group": "A",
           "matches": [
             {
-              "matchId": 1,
-              "homeGoals": 3,
-              "awayGoals": 1,
-              "points": 6
+              "id": 1,
+              "date":
+                {
+                  "day":"20",
+                  "month":"NOV"
+                },
+              "home": "Qatar",
+              "homeflag": "band",
+              "homeScore": 3,
+              "homePredicted": 3,
+              "away": "Ecuador",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "13:00",
+              "points": 5,
+              "status": "FINISHED"
             },
             {
-              "matchId": 2,
-              "homeGoals": 1,
-              "awayGoals": 4,
-              "points": 0
+              "id": 2,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Senegal",
+              "homeflag": "band",
+              "homeScore": 3,
+              "homePredicted": 2,
+              "away": "Paises Bajos",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 0,
+              "time": "13:00",
+              "points": 0,
+              "status": "PLAYING"
             },
             {
-              "matchId": 3,
-              "homeGoals": 5,
-              "awayGoals": 1,
-              "points": 0
+              "id": 3,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Qatar",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Senegal",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "10:00",
+              "points": 0,
+              "status": "PLAYING"
+            }, 
+            {
+              "id": 4,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Paises Bajos",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Ecuador",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "13:00",
+              "points": 0,
+              "status": "PLAYING"
             },
             {
-              "matchId": 4,
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "points": 0
-            },
+              "id": 5,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Ecuador",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Senegal",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "12:00",
+              "points": 0,
+              "status": "PLAYING"
+            }, 
             {
-              "matchId": 5,
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "points": 0
-            },
-            {
-              "matchId": 6,
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "points": 0
+              "id": 6,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Paises Bajos",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Qatar",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "12:00",
+              "points": 0,
+              "status": "NOT STARTED"
             }
           ]
         },
         {
-          "groupId": 2,
+          "id": 2,
           "group": "B",
           "matches": [
             {
-              "matchId": 1,
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "points": 0
+              "id": 1,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Inglaterra",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Iran",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "10:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 2,
-              "homeGoals": 1,
-              "awayGoals": 4,
-              "points": 0
+              "id": 2,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Estados Unidos",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Gales",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 3,
-              "homeGoals": 5,
-              "awayGoals": 1,
-              "points": 0
+              "id": 3,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Gales",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Iran",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "07:00",
+              "points": 0,
+              "status": "NOT STARTED"
+            }, 
+            {
+              "id": 4,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Inglaterra",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Estados Unidos",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 4,
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "points": 0
-            },
+              "id": 5,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Iran",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Estados Unidos",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
+            }, 
             {
-              "matchId": 5,
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "points": 0
-            },
-            {
-              "matchId": 6,
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "points": 0
+              "id": 6,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Gales",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Inglaterra",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             }
           ]
         }
@@ -93,86 +249,242 @@
       "userId": 2,
       "pronostics": [
         {
-          "groupId": 1,
+          "id": 1,
           "group": "A",
           "matches": [
             {
-              "matchId": 1,
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "points": 0
+              "id": 1,
+              "date":
+                {
+                  "day":"20",
+                  "month":"NOV"
+                },
+              "home": "Qatar",
+              "homeflag": "band",
+              "homeScore": 3,
+              "homePredicted": 3,
+              "away": "Ecuador",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 3,
+              "time": "13:00",
+              "points": 0,
+              "status": "FINISHED"
             },
             {
-              "matchId": 2,
-              "homeGoals": 1,
-              "awayGoals": 4,
-              "points": 0
+              "id": 2,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Senegal",
+              "homeflag": "band",
+              "homeScore": 3,
+              "homePredicted": 3,
+              "away": "Paises Bajos",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 3,
+              "time": "13:00",
+              "points": 0,
+              "status": "PLAYING"
             },
             {
-              "matchId": 3,
-              "homeGoals": 5,
-              "awayGoals": 1,
-              "points": 0
+              "id": 3,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Qatar",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Senegal",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "10:00",
+              "points": 0,
+              "status": "PLAYING"
+            }, 
+            {
+              "id": 4,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Paises Bajos",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Ecuador",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "13:00",
+              "points": 0,
+              "status": "PLAYING"
             },
             {
-              "matchId": 4,
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "points": 0
-            },
+              "id": 5,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Ecuador",
+              "homeflag": "band",
+              "homeScore": 1,
+              "homePredicted": 1,
+              "away": "Senegal",
+              "awayflag": "band",
+              "awayScore": 1,
+              "awayPredicted": 1,
+              "time": "12:00",
+              "points": 0,
+              "status": "PLAYING"
+            }, 
             {
-              "matchId": 5,
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "points": 0
-            },
-            {
-              "matchId": 6,
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "points": 0
+              "id": 6,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Paises Bajos",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Qatar",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "12:00",
+              "points": 0,
+              "status": "NOT STARTED"
             }
           ]
         },
         {
-          "groupId": 2,
+          "id": 2,
           "group": "B",
           "matches": [
             {
-              "matchId": 1,
-              "homeGoals": 2,
-              "awayGoals": 3,
-              "points": 0
+              "id": 1,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Inglaterra",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Iran",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "10:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 2,
-              "homeGoals": 1,
-              "awayGoals": 4,
-              "points": 0
+              "id": 2,
+              "date":
+                {
+                  "day":"21",
+                  "month":"NOV"
+                },
+              "home": "Estados Unidos",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Gales",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 3,
-              "homeGoals": 5,
-              "awayGoals": 1,
-              "points": 0
+              "id": 3,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Gales",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Iran",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "07:00",
+              "points": 0,
+              "status": "NOT STARTED"
+            }, 
+            {
+              "id": 4,
+              "date":
+                {
+                  "day":"25",
+                  "month":"NOV"
+                },
+              "home": "Inglaterra",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Estados Unidos",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             },
             {
-              "matchId": 4,
-              "homeGoals": 1,
-              "awayGoals": 1,
-              "points": 0
-            },
+              "id": 5,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Iran",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Estados Unidos",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
+            }, 
             {
-              "matchId": 5,
-              "homeGoals": 2,
-              "awayGoals": 1,
-              "points": 0
-            },
-            {
-              "matchId": 6,
-              "homeGoals": 4,
-              "awayGoals": 0,
-              "points": 0
+              "id": 6,
+              "date":
+                {
+                  "day":"29",
+                  "month":"NOV"
+                },
+              "home": "Gales",
+              "homeflag": "band",
+              "homeScore": 0,
+              "homePredicted": 0,
+              "away": "Inglaterra",
+              "awayflag": "band",
+              "awayScore": 0,
+              "awayPredicted": 0,
+              "time": "16:00",
+              "points": 0,
+              "status": "NOT STARTED"
             }
           ]
         }
