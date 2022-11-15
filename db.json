@@ -232,11 +232,11 @@
               "home": "Gales",
               "homeflag": "band",
               "homeScore": 0,
-              "homePredicted": 0,
+              "homePredicted": "",
               "away": "Inglaterra",
               "awayflag": "band",
               "awayScore": 0,
-              "awayPredicted": 0,
+              "awayPredicted": "",
               "time": "16:00",
               "points": 0,
               "status": "NOT STARTED"
